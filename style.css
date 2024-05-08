@@ -56,15 +56,14 @@ nav{
    display: flex;
    flex-direction: column;
    background-color: white;
-   border-bottom-left-radius: 20px;
-   border-bottom-right-radius: 20px;
-
+   border-radius: 20px;
 }
+
  .wrapper{
        width: 70%;
-      display: flex;
-      /* align-items: center; */
-      /* justify-content: space-between; */
+       display: grid;
+       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+       
       margin-inline:auto;
       color: black;
       gap:40px;
@@ -82,8 +81,7 @@ nav{
    
  }
  .border-1{
-           padding: 20px;
-   
+    padding: 20px;
     border-top: 0;
  }
  span{
@@ -111,6 +109,38 @@ line-height: 22.68px;
 text-align: left;
 
  }
+
+ .mobile-nav{
+  position: relative;
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  height: 100svh;
+  width: 70%;
+  flex-direction: column;
+  row-gap: 40px;
+  justify-content: unset;
+  align-items: start;
+  padding-top: 10rem;
+
+ }
+ .menu-open{
+  display: none;
+ }
+ .menu-close{
+  position: absolute;
+  color: white;
+  top: 20px;
+  right: 30px;
+
+ }
+ .mobile-nav  li{
+  font-size: 20px;
+ }
+
  footer{
    color: white;
    margin-top: 50px;
@@ -122,13 +152,26 @@ text-align: left;
    text-align: center;
 
  }
- /* .mb{
-   margin-bottom: 20px;
+ @media screen and (max-width: 768px){
+     .card img {
+        width: 100%;
+        height: 200px;
+      
+      }
+      .wrapper{
+        width: 100%;
+        padding-inline: 2rem;
+      }
+
+      nav{
+        margin-inline: 32px;
+      }
+      .desktop-nav{
+        display: none;
+      }
+      .menu-open{
+        color: white;
+        display: block;
+      }
  }
- .mb-2{
-   margin-bottom: 12px;
- }
- .mb-3{
-   margin-bottom: 38px;
- } */
  

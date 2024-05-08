@@ -17,12 +17,20 @@
     <header>
         <nav>
             <img src="IMG/logo.png" alt="">
-            <ul>
+            <ul class="desktop-nav">
                <a href="#"><li id="active">Home</li></a>  
                 <a href="#"><li>News + Features</li></a>
                 <a href="#"><li>Movies</li></a>
                 <a href="#"><li>Series</li></a> 
              </ul>
+            <ul class="mobile-nav" id="mobile-nav">
+               <a href="#"><li id="active">Home</li></a>  
+                <a href="#"><li>News + Features</li></a>
+                <a href="#"><li>Movies</li></a>
+                <a href="#"><li>Series</li></a> 
+                <div class="menu-close" id="menu-close"><i class="fa-solid fa-xmark"></i></div>
+             </ul>
+            <div class="menu-open" id="menu-open"><i class="fa-solid fa-bars"></i></div>
         </nav>
         
     </header>
@@ -30,7 +38,7 @@
     <main>
         <div class="wrapper">
             <div class="card">
-                 <img src="IMG/image 6.png" alt="">
+                    <img src="IMG/image 6.png" alt="">
                 <div class="border-1">
                     <h3>Star Wars: The Rise of Skywalker (Episode IX)</h3>
                     <p><span>Genre:</span> Action-Adventure, Science Fiction</p>
@@ -47,22 +55,20 @@
                     <p><span>Release Date: </span>13th December 2016</p>
                     <p class="mb"><span>Director: </span> Gareth Edwards </p>
                 </div>
-               
+                
             </div>
             <div class="card" >
-                <img src="IMG/image 8.png" alt="">
-                <div class="border-1">
-                    <h3>Star Wars: The Force Awakens (Episode VII)</h3>
-                    <p><span>Genre:</span> Action-Adventure, Science Fiction</p>
-                    <p><span>Release Date:</span> 18th December 2015</p>
-                    <p><span>Director:</span> J.J Abrams</p>
-                </div>
-             
-        </div>
-        </div>
-        <div class="wrapper">
+                    <img src="IMG/image 8.png" alt="">
+                    <div class="border-1">
+                        <h3>Star Wars: The Force Awakens (Episode VII)</h3>
+                        <p><span>Genre:</span> Action-Adventure, Science Fiction</p>
+                        <p><span>Release Date:</span> 18th December 2015</p>
+                        <p><span>Director:</span> J.J Abrams</p>
+                    </div>
+                
+            </div>
             <div class="card">
-                 <img src="IMG/image 9.png" alt="">
+                <img src="IMG/image 9.png" alt="">
                 <div class="border-1">
                     <h3>Solo: A Star Wars Story</h3>
                     <p><span>Genre:</span> Action-Adventure,Crime,Science Fiction</p>
@@ -79,7 +85,7 @@
                     <p><span>Release Date: </span>20th December 2019</p>
                     <p class="mb-2" ><span>Director: </span>Ryan Johnson</p>
                 </div>
-               
+            
             </div>
             <div class="card" >
                 <img src="IMG/image 10.png" alt="">
@@ -89,11 +95,29 @@
                     <p><span>Release Date:</span>  25th May 1983</p>
                     <p ><span>Director:</span>  Richard Marquand</p>
                 </div>
-             
+            </div>
         </div>
     </main>
     <footer> 
         <p>Copyright © StarWars API 2023. All Rights Reserved.</p>
     </footer>
+    <script>
+        const openMenu=document.getElementById('menu-open');
+        const closeMenu=document.getElementById('menu-close');
+        const mobileNav=document.getElementById('mobile-nav');
+
+        openMenu.addEventListener('click', ()=>{
+            mobileNav.style.display = 'flex'
+        })
+
+        closeMenu.addEventListener('click', ()=>{
+            mobileNav.style.display = 'none'
+        })
+
+
+        console.log(openMenu);
+        console.log(closeMenu);
+        console.log(mobileNav);
+    </script>
 </body>
 </html>  
